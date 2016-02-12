@@ -1,6 +1,10 @@
-/BuiltLibs/x86/GazeApiLib.lib
-/BuiltLibs/x86/GazeApiLib.pdb
-/BuiltLibs/x86/GazeApiLibD.lib
+/BuiltLibs/x64/GazeApiLib*
+/BuiltLibs/x86/GazeApiLib*
+/BuiltLibs/OutputCopy
+/EyeTribeComm/Intermediate
+/EyeTribeComm/Output
+/EyeTribeComm/ipch
+/EyeTribeComm/.vs
 /EyeTribeComm/*.suo
 /EyeTribeComm/*.sdf
 /EyeTribeComm/EyeTribeCommDLL/*.user
