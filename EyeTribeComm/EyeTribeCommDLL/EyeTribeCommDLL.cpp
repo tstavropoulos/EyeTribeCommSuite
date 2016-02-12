@@ -9,8 +9,6 @@
 #include "Logging.h"
 #include "MyGaze.h"
 
-
-
 namespace EyeTribeComm
 {
 	MyGaze EyeTribeComm::m_Gaze;

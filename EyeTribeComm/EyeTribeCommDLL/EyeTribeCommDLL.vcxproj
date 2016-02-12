@@ -30,6 +30,7 @@
     <ProjectGuid>{FDC1C069-40B2-4D1E-A17C-2BA64D6C396C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>EyeTribeCommDLL</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -97,32 +98,32 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)Output\$(PlatformShortName)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)Intermediate\$(PlatformShortName)\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)Intermediate\$(ProjectName)\$(PlatformShortName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)Output\$(PlatformShortName)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)Intermediate\$(PlatformShortName)\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)Intermediate\$(ProjectName)\$(PlatformShortName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)Output\$(PlatformShortName)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)Intermediate\$(PlatformShortName)\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)Intermediate\$(ProjectName)\$(PlatformShortName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)Output\$(PlatformShortName)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)Intermediate\$(PlatformShortName)\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)Intermediate\$(ProjectName)\$(PlatformShortName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MatLab|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)Output\$(PlatformShortName)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)Intermediate\$(PlatformShortName)\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)Intermediate\$(ProjectName)\$(PlatformShortName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MatLab|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)Output\$(PlatformShortName)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)Intermediate\$(PlatformShortName)\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)Intermediate\$(ProjectName)\$(PlatformShortName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
