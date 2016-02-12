@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EyeTribeCommDLL", "EyeTribeCommDLL\EyeTribeCommDLL.vcxproj", "{FDC1C069-40B2-4D1E-A17C-2BA64D6C396C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EyeTribeCommExample", "EyeTribeCommExample\EyeTribeCommExample.vcxproj", "{0DD140FC-9E0F-4F44-9136-851F87FE4FD5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FDC1C069-40B2-4D1E-A17C-2BA64D6C396C} = {FDC1C069-40B2-4D1E-A17C-2BA64D6C396C}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		MatLab|Win32 = MatLab|Win32
+		MatLab|x64 = MatLab|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDC1C069-40B2-4D1E-A17C-2BA64D6C396C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FDC1C069-40B2-4D1E-A17C-2BA64D6C396C}.Debug|Win32.Build.0 = Debug|Win32
+		{FDC1C069-40B2-4D1E-A17C-2BA64D6C396C}.Debug|x64.ActiveCfg = Debug|x64
+		{FDC1C069-40B2-4D1E-A17C-2BA64D6C396C}.Debug|x64.Build.0 = Debug|x64
+		{FDC1C069-40B2-4D1E-A17C-2BA64D6C396C}.MatLab|Win32.ActiveCfg = MatLab|Win32
+		{FDC1C069-40B2-4D1E-A17C-2BA64D6C396C}.MatLab|Win32.Build.0 = MatLab|Win32
+		{FDC1C069-40B2-4D1E-A17C-2BA64D6C396C}.MatLab|x64.ActiveCfg = MatLab|x64
+		{FDC1C069-40B2-4D1E-A17C-2BA64D6C396C}.MatLab|x64.Build.0 = MatLab|x64
+		{FDC1C069-40B2-4D1E-A17C-2BA64D6C396C}.Release|Win32.ActiveCfg = Release|Win32
+		{FDC1C069-40B2-4D1E-A17C-2BA64D6C396C}.Release|Win32.Build.0 = Release|Win32
+		{FDC1C069-40B2-4D1E-A17C-2BA64D6C396C}.Release|x64.ActiveCfg = Release|x64
+		{FDC1C069-40B2-4D1E-A17C-2BA64D6C396C}.Release|x64.Build.0 = Release|x64
+		{0DD140FC-9E0F-4F44-9136-851F87FE4FD5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0DD140FC-9E0F-4F44-9136-851F87FE4FD5}.Debug|Win32.Build.0 = Debug|Win32
+		{0DD140FC-9E0F-4F44-9136-851F87FE4FD5}.Debug|x64.ActiveCfg = Debug|x64
+		{0DD140FC-9E0F-4F44-9136-851F87FE4FD5}.Debug|x64.Build.0 = Debug|x64
+		{0DD140FC-9E0F-4F44-9136-851F87FE4FD5}.MatLab|Win32.ActiveCfg = Release|Win32
+		{0DD140FC-9E0F-4F44-9136-851F87FE4FD5}.MatLab|Win32.Build.0 = Release|Win32
+		{0DD140FC-9E0F-4F44-9136-851F87FE4FD5}.MatLab|x64.ActiveCfg = Release|x64
+		{0DD140FC-9E0F-4F44-9136-851F87FE4FD5}.MatLab|x64.Build.0 = Release|x64
+		{0DD140FC-9E0F-4F44-9136-851F87FE4FD5}.Release|Win32.ActiveCfg = Release|Win32
+		{0DD140FC-9E0F-4F44-9136-851F87FE4FD5}.Release|Win32.Build.0 = Release|Win32
+		{0DD140FC-9E0F-4F44-9136-851F87FE4FD5}.Release|x64.ActiveCfg = Release|x64
+		{0DD140FC-9E0F-4F44-9136-851F87FE4FD5}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
