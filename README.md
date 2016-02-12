@@ -3,6 +3,7 @@ A suite of C++ Libraries and MatLab scripts to pull gaze data in realtime off of
 
 Setting up Libraries
 =====================
+Because I do not have permission to redestribute the gazeapi files, you need to set it up yourself.  The directions for doing so follow.
 
 Copy the following header files to the /Include/ directory:
 *   gazeapi.h
