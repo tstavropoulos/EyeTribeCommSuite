@@ -89,3 +89,46 @@ void MyGaze::disconnect()
 		m_bInitialized = false;
 	}
 }
+
+
+void MyGaze::calibrationClear()
+{
+	if (m_bInitialized)
+	{
+		m_api.calibration_clear();
+	}
+}
+
+bool MyGaze::calibrationStart(int const points)
+{
+	if (m_bInitialized)
+	{
+		return m_api.calibration_start(points);
+	}
+	return false;
+}
+
+void MyGaze::calibrationPointStart(int const x, int const y)
+{
+	if (m_bInitialized)
+	{
+		m_api.calibration_point_start(x,y);
+	}
+}
+
+void MyGaze::calibrationPointEnd()
+{
+	if (m_bInitialized)
+	{
+		m_api.calibration_point_end();
+	}
+}
+
+void MyGaze::calibrationAbort()
+{
+	if (m_bInitialized)
+	{
+		m_api.calibration_abort();
+	}
+}
+

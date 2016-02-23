@@ -44,6 +44,31 @@ namespace EyeTribeComm
 		m_bInitialized = false;
 		m_Gaze.disconnect();
 	}
+
+	bool EyeTribeComm::calibrationStart(int points)
+	{
+		return m_Gaze.calibrationStart(points);
+	}
+
+	void EyeTribeComm::calibrationPointStart(int x, int y)
+	{
+		m_Gaze.calibrationPointStart(x, y);
+	}
+
+	void EyeTribeComm::calibrationPointEnd()
+	{
+		m_Gaze.calibrationPointEnd();
+	}
+
+	void EyeTribeComm::calibrationAbort()
+	{
+		m_Gaze.calibrationAbort();
+	}
+
+	void EyeTribeComm::calibrationClear()
+	{
+		m_Gaze.calibrationClear();
+	}
 }
 
 

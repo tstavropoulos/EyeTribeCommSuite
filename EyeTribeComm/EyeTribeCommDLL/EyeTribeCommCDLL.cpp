@@ -43,4 +43,29 @@ EYETRIBECOMMDLL_API void Disconnect()
 	sGaze.disconnect();
 }
 
+EYETRIBECOMMDLL_API bool calibrationStart(int points)
+{
+	return sGaze.calibrationStart(points);
+}
+
+EYETRIBECOMMDLL_API void calibrationPointStart(int x, int y)
+{
+	sGaze.calibrationPointStart(x, y);
+}
+
+EYETRIBECOMMDLL_API void calibrationPointEnd()
+{
+	sGaze.calibrationPointEnd();
+}
+
+EYETRIBECOMMDLL_API void calibrationAbort()
+{
+	sGaze.calibrationAbort();
+}
+
+EYETRIBECOMMDLL_API void calibrationClear()
+{
+	sGaze.calibrationClear();
+}
+
 #endif // NOTMATLAB

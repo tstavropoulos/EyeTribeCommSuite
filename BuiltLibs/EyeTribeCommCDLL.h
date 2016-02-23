@@ -26,6 +26,19 @@ extern "C"
 
 	EYETRIBECOMMDLL_API void Disconnect();
 
+	//Calibration Functions
+
+	//Clear current Calibration
+	EYETRIBECOMMDLL_API void calibrationClear();
+	//Start new Calibration Session
+	EYETRIBECOMMDLL_API bool calibrationStart(int points);
+	//Start new Calibration Point
+	EYETRIBECOMMDLL_API void calibrationPointStart(int x, int y);
+	//End current Calibration Point
+	EYETRIBECOMMDLL_API void calibrationPointEnd();
+	//Abort Calibration Session
+	EYETRIBECOMMDLL_API void calibrationAbort();
+
 #ifdef __cplusplus
 }
 #endif // __cplusplus

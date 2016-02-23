@@ -2,6 +2,9 @@ function ExampleTask
 	fprintf('Initializing EyeTribe.\n');
     EyeTribeInit();
     
+    %Seconds until the task times out
+    CollectionTimeout = 5; 
+    
     x = zeros(1,1000);
     y = zeros(1,1000);
     
@@ -25,7 +28,7 @@ function ExampleTask
 	fprintf('Beginning Data Collection.\n');
     
     onCleanup(@Cleanup);
-    
+    tic;
     while currElem < 1000
         if ( GetNewData() )
             [x(currElem),y(currElem)] = GetGazeData();
@@ -45,6 +48,10 @@ function ExampleTask
             end
             %100 us pause updates plot 
             pause(0.0001);
+            tic;
+        elseif ( toc > CollectionTimeout )
+            fprintf('Sample Collection Timeout - Took too long to acquire next sample.\n');
+            break;
         end
     end
     finished = true;

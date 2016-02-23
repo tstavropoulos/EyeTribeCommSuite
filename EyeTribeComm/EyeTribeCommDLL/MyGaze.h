@@ -26,6 +26,22 @@ namespace EyeTribeComm
 
 		//Removes self as a listener of gaze data and disconencts from the GazeAPI
 		void disconnect();
+
+		//Clears the current server calibration
+		void calibrationClear();
+
+		//Begins a calibration with the indicated number of points
+		bool calibrationStart(int const points);
+
+		//Begins a calibration point at (x,y)
+		void calibrationPointStart(int const x, int const y);
+
+		//Ends the current calibration point
+		void calibrationPointEnd();
+
+		//Aborts the current attempt to calibrate
+		void calibrationAbort();
+
 	private:
 		//IGazeListener update function
 		void on_gaze_data(gtl::GazeData const &gaze_data);
@@ -42,6 +58,7 @@ namespace EyeTribeComm
 		//Stores the quality of the last gaze data
 		int m_iQuality;
 
+		//Update safety
 		std::mutex m_mtxUpdating;
 	};
 }

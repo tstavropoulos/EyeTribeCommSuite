@@ -29,6 +29,20 @@ namespace EyeTribeComm
 
 		static EYETRIBECOMMDLL_API void Disconnect();
 
+
+		//Calibration Functions
+
+		//Clear current Calibration
+		static EYETRIBECOMMDLL_API void calibrationClear();
+		//Start new Calibration Session
+		static EYETRIBECOMMDLL_API bool calibrationStart(int points);
+		//Start new Calibration Point
+		static EYETRIBECOMMDLL_API void calibrationPointStart(int x, int y);
+		//End current Calibration Point
+		static EYETRIBECOMMDLL_API void calibrationPointEnd();
+		//Abort Calibration Session
+		static EYETRIBECOMMDLL_API void calibrationAbort();
+
 	protected:
 		/*  m_bInitialized tracks whether or not the DLL has been initialized.
 		*/
