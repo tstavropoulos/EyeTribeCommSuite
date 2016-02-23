@@ -41,6 +41,8 @@ namespace EyeTribeComm
 		bool m_bNewGazeData;
 		//Stores the quality of the last gaze data
 		int m_iQuality;
+
+		std::mutex m_mtxUpdating;
 	};
 }
 

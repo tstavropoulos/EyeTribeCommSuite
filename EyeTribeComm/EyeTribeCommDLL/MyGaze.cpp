@@ -23,7 +23,7 @@ MyGaze::~MyGaze()
 void MyGaze::init()
 {
 	//Connect to the server in push mdoe on the default TCP port (6555)
-	if (m_api.connect(true))
+	if (!m_bInitialized && m_api.connect(true))
 	{
 		//Enable GazeData notifications
 		m_api.add_listener(*this);
@@ -42,6 +42,8 @@ void MyGaze::on_gaze_data(gtl::GazeData const &gaze_data)
 
 		//gtl::Point2D const &smoothedCoordinates = gaze_data.avg;
 
+		//Mutex for update protection
+		std::lock_guard<std::mutex> lock(m_mtxUpdating);
 		m_p2dLastGazePoint = gaze_data.avg;
 		m_bNewGazeData = true;
 		m_iQuality = 1 + (gaze_data.state & gtl::GazeData::GD_STATE_TRACKING_GAZE);
@@ -51,11 +53,15 @@ void MyGaze::on_gaze_data(gtl::GazeData const &gaze_data)
 
 bool MyGaze::getNewGazeData()
 {
+	//Does not need update protection.  Only reading m_bNewGazeData and it's on the same thread as the potentially
+	//	confounding method getLatestGazeData
 	return m_bNewGazeData;
 }
 
 void MyGaze::getLatestGazeData(float &a_rfX, float &a_rfY, int &a_riQuality)
 {
+	//Mutex for update protection
+	std::lock_guard<std::mutex> lock(m_mtxUpdating);
 	if (!m_bNewGazeData)
 	{
 		//No new data available

@@ -3,8 +3,9 @@ function EyeTribeInit()
 %   Initializes the EyeTribe tracking library if it is not already loaded.
 	if ( ~libisloaded('EyeTribeCommDLL'))
 		LoadEyeTribeDLL64()
-	end
-	calllib('EyeTribeCommDLL','Init');
+    end
+    
+    calllib('EyeTribeCommDLL','Init');
 end
 
 function LoadEyeTribeDLL64()
