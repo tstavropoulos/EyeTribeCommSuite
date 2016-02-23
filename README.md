@@ -8,7 +8,7 @@ Setting Up Software
 First, you'll need to install the EyeTribe SDK (Only available if you have ordered an EyeTribe).
 The EyeTribe Server that comes with the SDK needs to be running in order to communicate with the EyeTribe.
 
-The binary files included were built with the most recent version of Visual Studio Community 2015 (msvc140).  To use with MatLab you'll need to install that, or at least its compiler, or recompile the various libraries yourself.
+The binary files included were built with the most recent version of Visual Studio Community 2015 (msvc140).  To use with MatLab you'll need to install that (it's free [from Microsoft HERE](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)), or at least its redistributable (which you can download free [from Microsoft HERE](https://www.microsoft.com/en-us/download/details.aspx?id=48145)), or recompile the various libraries yourself.
 
 To use the EyeTribeCommDLL with an application that allows you to load libraries, follow the example in the C++ application.
 
