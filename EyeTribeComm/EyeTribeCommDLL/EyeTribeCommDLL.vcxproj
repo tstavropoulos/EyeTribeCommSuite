@@ -131,13 +131,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>NOTMATLAB;WIN32;_DEBUG;_WINDOWS;_USRDLL;EYETRIBECOMMDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)../Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../ThirdParty/Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(SolutionDir)../BuiltLibs/$(PlatformShortName)/GazeApiLibD.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\boost\$(PlatformShortName)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GazeApiLibD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)../ThirdParty/$(PlatformShortName)/</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -146,13 +146,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>NOTMATLAB;WIN32;_DEBUG;_WINDOWS;_USRDLL;EYETRIBECOMMDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)../Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../ThirdParty/Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(SolutionDir)../BuiltLibs/$(PlatformShortName)/GazeApiLibD.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\boost\$(PlatformShortName)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GazeApiLibD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)../ThirdParty/$(PlatformShortName)/</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -163,15 +163,15 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NOTMATLAB;WIN32;NDEBUG;_WINDOWS;_USRDLL;EYETRIBECOMMDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)../Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../ThirdParty/Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(SolutionDir)../BuiltLibs/$(PlatformShortName)/GazeApiLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\boost\$(PlatformShortName)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GazeApiLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)../ThirdParty/$(PlatformShortName)/</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -182,15 +182,15 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NOTMATLAB;WIN32;NDEBUG;_WINDOWS;_USRDLL;EYETRIBECOMMDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)../Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../ThirdParty/Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(SolutionDir)../BuiltLibs/$(PlatformShortName)/GazeApiLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\boost\$(PlatformShortName)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GazeApiLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)../ThirdParty/$(PlatformShortName)/</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MatLab|Win32'">
@@ -201,15 +201,15 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>MATLAB;WIN32;NDEBUG;_WINDOWS;_USRDLL;EYETRIBECOMMDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)../Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../ThirdParty/Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(SolutionDir)../BuiltLibs/$(PlatformShortName)/GazeApiLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\boost\$(PlatformShortName)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GazeApiLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)../ThirdParty/$(PlatformShortName)/</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y $(OutputPath)$(TargetName).lib $(SolutionDir)..\BuiltLibs\OutputCopy\$(PlatformShortName)\
@@ -228,15 +228,15 @@ xcopy /y $(ProjectDir)EyeTribeCommCDLL.h $(SolutionDir)..\BuiltLibs\OutputCopy\<
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>MATLAB;WIN32;NDEBUG;_WINDOWS;_USRDLL;EYETRIBECOMMDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)../Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../ThirdParty/Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(SolutionDir)../BuiltLibs/$(PlatformShortName)/GazeApiLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\boost\$(PlatformShortName)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GazeApiLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)../ThirdParty/$(PlatformShortName)/</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /y $(OutputPath)$(TargetName).lib $(SolutionDir)..\BuiltLibs\OutputCopy\$(PlatformShortName)\
