@@ -31,16 +31,19 @@ namespace EyeTribeComm
 		void calibrationClear();
 
 		//Begins a calibration with the indicated number of points
-		bool calibrationStart(int const points);
+		bool calibrationStart(const int points);
 
 		//Begins a calibration point at (x,y)
-		void calibrationPointStart(int const x, int const y);
+		void calibrationPointStart(const int x, const int y);
 
 		//Ends the current calibration point
 		void calibrationPointEnd();
 
 		//Aborts the current attempt to calibrate
 		void calibrationAbort();
+
+		//Gets the current calibration results
+		void calibrationResults(bool &a_rbSuccess, float &a_rfDegErr, float &a_rfDegL, float &a_rfDegR);
 
 	private:
 		//IGazeListener update function

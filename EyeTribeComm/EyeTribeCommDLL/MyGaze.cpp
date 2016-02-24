@@ -40,8 +40,6 @@ void MyGaze::on_gaze_data(gtl::GazeData const &gaze_data)
 			return;
 		}
 
-		//gtl::Point2D const &smoothedCoordinates = gaze_data.avg;
-
 		//Mutex for update protection
 		std::lock_guard<std::mutex> lock(m_mtxUpdating);
 		m_p2dLastGazePoint = gaze_data.avg;
@@ -90,7 +88,6 @@ void MyGaze::disconnect()
 	}
 }
 
-
 void MyGaze::calibrationClear()
 {
 	if (m_bInitialized)
@@ -99,7 +96,7 @@ void MyGaze::calibrationClear()
 	}
 }
 
-bool MyGaze::calibrationStart(int const points)
+bool MyGaze::calibrationStart(const int points)
 {
 	if (m_bInitialized)
 	{
@@ -108,7 +105,7 @@ bool MyGaze::calibrationStart(int const points)
 	return false;
 }
 
-void MyGaze::calibrationPointStart(int const x, int const y)
+void MyGaze::calibrationPointStart(const int x, const int y)
 {
 	if (m_bInitialized)
 	{
@@ -132,3 +129,16 @@ void MyGaze::calibrationAbort()
 	}
 }
 
+void MyGaze::calibrationResults(bool &a_rbSuccess, float &a_rfDegErr, float &a_rfDegL, float &a_rfDegR)
+{
+	if (m_bInitialized)
+	{
+		gtl::CalibResult calibResult;
+		m_api.get_calib_result(calibResult);
+
+		a_rbSuccess = calibResult.result;
+		a_rfDegErr = calibResult.deg;
+		a_rfDegL = calibResult.degl;
+		a_rfDegR = calibResult.degr;
+	}
+}

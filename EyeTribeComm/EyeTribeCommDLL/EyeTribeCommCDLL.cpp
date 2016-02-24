@@ -9,7 +9,9 @@
 #include "Logging.h"
 #include "MyGaze.h"
 
+//Tracks whether the Library has been initialized
 static bool sbInitialized = false;
+//GazeAPI Listener
 static EyeTribeComm::MyGaze sGaze;
 
 
@@ -66,6 +68,17 @@ EYETRIBECOMMDLL_API void calibrationAbort()
 EYETRIBECOMMDLL_API void calibrationClear()
 {
 	sGaze.calibrationClear();
+}
+
+EYETRIBECOMMDLL_API void calibrationResultsDetailed(bool *a_pbSuccess, float *a_pfDegErr, float *a_pfDegL, float *a_pfDegR)
+{
+	sGaze.calibrationResults(*a_pbSuccess, *a_pfDegErr, *a_pfDegL, *a_pfDegR);
+}
+
+EYETRIBECOMMDLL_API void calibrationResults(bool *a_pbSuccess)
+{
+	float fTemp1, fTemp2, fTemp3;
+	sGaze.calibrationResults(*a_pbSuccess, fTemp1, fTemp2, fTemp3);
 }
 
 #endif // NOTMATLAB

@@ -15,16 +15,23 @@
 extern "C"
 {
 #endif
-	/*  Init() initializes the EyeTribeCommDLL.  Returns success.
-	*/
+	//Library Functions
+
+	//Initializes the EyeTribeCommDLL and connect to the GazeAPI
 	EYETRIBECOMMDLL_API bool Init();
+	//Disconnect from the GazeAPI
+	EYETRIBECOMMDLL_API void Disconnect();
 
+
+	//Gaze Data Functions
+
+	//Test if new Gaze Data is available
 	EYETRIBECOMMDLL_API bool getNewGazeData();
-
+	//Return most recent Gaze Data (destructive)
 	EYETRIBECOMMDLL_API void getLatestGazeData(float *a_pfX, float *a_pfY);
+	//Return most recent Gaze Data with Quality information (destructive)
 	EYETRIBECOMMDLL_API void getLatestGazeQualityData(float *a_pfX, float *a_pfY, int *a_piQuality);
 
-	EYETRIBECOMMDLL_API void Disconnect();
 
 	//Calibration Functions
 
@@ -38,6 +45,11 @@ extern "C"
 	EYETRIBECOMMDLL_API void calibrationPointEnd();
 	//Abort Calibration Session
 	EYETRIBECOMMDLL_API void calibrationAbort();
+	//Get Detailed Calibration Results
+	EYETRIBECOMMDLL_API void calibrationResultsDetailed(bool *a_pbSuccess, float *a_pfDegErr, float *a_pfDegL, float *a_pfDegR);
+	//Get Simple Calibration Results
+	EYETRIBECOMMDLL_API void calibrationResults(bool *a_pbSuccess);
+
 
 #ifdef __cplusplus
 }

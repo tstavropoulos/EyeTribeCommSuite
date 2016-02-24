@@ -69,6 +69,18 @@ namespace EyeTribeComm
 	{
 		m_Gaze.calibrationClear();
 	}
+
+	void EyeTribeComm::calibrationResultsDetailed(bool &a_rbSuccess, float &a_rfDegErr, float &a_rfDegL, float &a_rfDegR)
+	{
+		m_Gaze.calibrationResults(a_rbSuccess, a_rfDegErr, a_rfDegL, a_rfDegR);
+	}
+
+	void EyeTribeComm::calibrationResults(bool &a_rbSuccess)
+	{
+		float fTemp1, fTemp2, fTemp3;
+
+		m_Gaze.calibrationResults(a_rbSuccess, fTemp1, fTemp2, fTemp3);
+	}
 }
 
 
