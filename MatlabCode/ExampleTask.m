@@ -16,9 +16,9 @@ function ExampleTask
     figure(1);
     clf;
     ax = axes();
-    h = plot(ax,0,0);
+    h = plot(ax,0,0,'LineWidth',4);
     hold on;
-    g = plot(ax,0,0,'o');
+    g = plot(ax,0,0,'+','LineWidth',6,'MarkerSize',30);
     hold off;
     %These are the real-pixel values that the plot occupies when maximized
     %on a 1920x1200 display

@@ -16,9 +16,9 @@ function ExampleCalibration
     figure(1);
     clf;
     ax = axes();
-    h = plot(ax,0,0);
+    h = plot(ax,0,0,'LineWidth',4);
     hold on;
-    g = plot(ax,0,0,'o');
+    g = plot(ax,0,0,'+','LineWidth',6,'MarkerSize',30);
     hold off;
     %These are the real-pixel values that the plot occupies when maximized
     %on a 1920x1200 display
@@ -33,19 +33,23 @@ function ExampleCalibration
     
     
     %Perform Calibration Here
-    EyeTribeCalibrationStart(4);
+    EyeTribeCalibrationStart(8);
     DrawAndPresentPoint(g,400,400,0.25,3);
     DrawAndPresentPoint(g,1520,800,0.25,3);
+    DrawAndPresentPoint(g,1000,400,0.25,3);
     DrawAndPresentPoint(g,400,800,0.25,3);
+    DrawAndPresentPoint(g,1000,800,0.25,3);
+    DrawAndPresentPoint(g,1000,600,0.25,3);
+    DrawAndPresentPoint(g,1520,600,0.25,3);
     DrawAndPresentPoint(g,1520,400,0.25,3);
     
     tic;
     while currElem < 1000
         if ( GetNewData() )
-            [x(currElem),y(currElem)] = GetGazeData();
+            [x(currElem), y(currElem)] = GetGazeData();
 
             %Fix sign on y coordinate
-            y(currElem) = 1200 - y(currElem);
+            y(currElem) = translate(y(currElem));
 
             set(h,'xdata',x(1:currElem));
             set(h,'ydata',y(1:currElem));
@@ -85,5 +89,9 @@ function DrawAndPresentPoint(plotobj, x, y, delay, time)
     set(plotobj,'xdata',x);
     set(plotobj,'ydata',y);
     pause(delay);
-    EyeTribeCalibrationPoint(x,y,time);
+    EyeTribeCalibrationPoint(x,translate(y),time);
+end
+
+function screenCoordinate = translate(y)
+    screenCoordinate = 1080 - y;
 end
